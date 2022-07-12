@@ -1,5 +1,7 @@
 
-const getLargest = require("../getLargest");
+const getLargest = require('../numberFunctions');
+
+const getLargest = require("../numberFunctions");
 
 describe("getLargest", () => {
 
