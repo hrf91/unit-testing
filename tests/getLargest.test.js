@@ -1,3 +1,4 @@
+
 const getLargest = require("../getLargest");
 
 describe("getLargest", () => {
@@ -7,9 +8,16 @@ test("getLargest is a function", () => {
     expect(typeof getLargest).toBe("function");
 })
 
-test("getLargest returns the largest value", () => {
-    const result = getLargest(1, 2, 3);
+describe("It handles normal inputs successfully", () => {
 
-    expect(result).toEqual(3);
+    each([
+        [1, 2, 3], 3],
+        [[9, 8, 7], 9],
+        [[12, 26, 19], 36]
+    ]).test("", (arr, expected) => {
+        expect(getLargest(arr)).toEqual(expected);
+    })
+
+
 })
 })
