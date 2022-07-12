@@ -11,11 +11,11 @@ test("getLargest is a function", () => {
 describe("It handles normal inputs successfully", () => {
 
     each([
-        [1, 2, 3], 3],
+        [[1, 2, 3], 3],
         [[9, 8, 7], 9],
         [[12, 26, 19], 36]
     ]).test("", (arr, expected) => {
-        expect(getLargest(arr)).toEqual(expected);
+        expect(getLargest(...arr)).toEqual(expected);
     })
 
 
